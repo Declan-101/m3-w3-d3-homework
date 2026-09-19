@@ -1,0 +1,83 @@
+/* Imports */
+@import "colors";
+@import "nav";
+
+/* Variables */
+$main-font: Arial, Helvetica, Sans-Serif;
+$title-font: 'Sacramento', cursive;
+
+/* Mixin */
+@mixin center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Global */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $gold;
+  font-family: $main-font;
+  margin: 0 auto;
+  width: 1350px;
+}
+
+/* Nest Main */
+main {
+  background-color: $white;
+  display: flex;
+  padding: 15px;
+  min-height: 535px;
+
+  #intro-text {
+    background-color: $light-gray;
+    width: 40%;
+    text-align: center;
+    flex-direction: column;
+
+    @include center-content;
+
+    span {
+      font-family: $title-font;
+      font-size: 2rem;
+      color: $dark-gray;
+    }
+
+    h3 {
+      color: $dark-gray;
+      font-size: 1.8rem;
+    }
+
+    p {
+      color: $dark-gray;
+    }
+
+    .submit-buttton {
+      background-color: $gold;
+      color: $white;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+  }
+
+  #intro-image {
+    width: 60%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}
+
+footer {
+  background-color: $gold;
+  padding: 20px 30px;
+  color: $dark-gray;
+}
